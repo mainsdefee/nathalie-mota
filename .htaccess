@@ -1,3 +1,17 @@
+# BEGIN SF Move Login
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /nathalie/
+    RewriteRule ^postpass/?$ /nathalie/wp-login.php?action=postpass [QSA,L]
+    RewriteRule ^logout/?$ /nathalie/wp-login.php?action=logout [QSA,L]
+    RewriteRule ^lostpassword/?$ /nathalie/wp-login.php?action=lostpassword [QSA,L]
+    RewriteRule ^resetpass/?$ /nathalie/wp-login.php?action=resetpass [QSA,L]
+    RewriteRule ^register/?$ /nathalie/wp-login.php?action=register [QSA,L]
+    RewriteRule ^login/?$ /nathalie/wp-login.php [QSA,L]
+</IfModule>
+# END SF Move Login
+
+
 
 # BEGIN WordPress
 # Les directives (lignes) entre « BEGIN WordPress » et « END WordPress » sont générées
