@@ -12,6 +12,7 @@
  */
 
 ?>
+
 			</main><!-- #main -->
 		</div><!-- #primary -->
 	</div><!-- #content -->
@@ -44,6 +45,13 @@
 	</footer><!-- #colophon -->
 
 </div><!-- #page -->
+
+<!--inclure le modèle modale-contact.php-->
+<?php get_template_part('templates/modal', 'contact'); ?>
+
+
+
+
 
 <?php wp_footer(); ?>
 
