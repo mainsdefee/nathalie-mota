@@ -11,3 +11,4 @@ jQuery(".modal-close").on("click", function () {
 
 // Pré-remplir le champ RÉF. PHOTO
 jQuery("#wpforms-137-field_2").val("valeur par défaut");
+// Le code JavaScript pour la lightbox//

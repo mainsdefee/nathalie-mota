@@ -1,3 +1,9 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  left: 2px;
+}
 /*personnalisation du menu header et footer*/
 .menu-item a {
   text-decoration: none !important;
@@ -62,4 +68,615 @@
 }
 button#wpforms-submit-137.wpforms-submit {
   background-color: #e00000 !important;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw; /* Le conteneur occupe 100% de la largeur de la fenêtre */
+  height: 100vh; /* Le conteneur occupe 100% de la hauteur de la fenêtre */
+  font-family: Space Mono; /* intégrer la police Space Mono pour le texte */
+  font-size: 14px; /* Définir la taille de police à 14 pixels */
+}
+
+.titrephoto {
+  font-family: Space Mono; /* Utiliser la police Space Mono pour le titre */
+  font-style: italic; /* mettre le titre est en italique */
+  font-size: 66px; /* Définir la taille de police du titre à 66 pixels */
+}
+
+.left-block {
+  flex-basis: 50%; /* Le bloc de gauche occupe 50% de l'espace disponible dans le conteneur */
+  padding: 2vw; /* Ajouter un espacement intérieur de 2% de la largeur du conteneur */
+  position: relative;
+  top: -51px;
+}
+
+.image3 {
+  font-size: 150px; /* Définir la taille de police à 150 pixels pour les éléments avec la classe "image3" */
+}
+
+.right-block {
+  flex-basis: 50%; /* Le bloc de droite occupe 50% de l'espace disponible dans le conteneur */
+  position: relative;
+  order: 0 !important; /* Définir l'ordre d'affichage de ce bloc  */
+}
+
+.right-block img {
+  width: 750px;
+  height: 700px;
+  object-fit: cover; /* Ajuster l'image pour qu'elle remplisse complètement le bloc sans déformation */
+}
+
+.overlay {
+  position: absolute; /* Position absolue par rapport au bloc parent */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 92%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* L'overlay est initialement transparent */
+  transition: opacity 0.3s ease; /* Animation de transition pour l'opacité */
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+}
+
+.right-block:hover .overlay {
+  opacity: 1; /* L'overlay devient visible au survol du bloc parent */
+}
+
+.fullscreen-icon {
+  display: block;
+  width: 5vw; /* Largeur de l'icône en unité vw  */
+  height: 5vw; /* Hauteur de l'icône en unité vw  */
+  background-repeat: no-repeat;
+  background-position: center center;
+  filter: invert(1); /* Inverser les couleurs de l'icône */
+  transition: transform 0.3s ease-in-out; /* Animation de transition pour l'effet de zoom au survol */
+}
+
+.fullscreen-icon:hover {
+  transform: scale(
+    1.2
+  ); /* Au survol de l'icône plein écran, elle est agrandie */
+}
+
+a.full-screen-icon {
+  color: #fff; /* Les liens ayant la classe "full-screen-icon" ont une couleur de texte blanche */
+}
+
+a.download-icon {
+  color: #fff; /* Les liens ayant la classe "download-icon" ont une couleur de texte blanche */
+}
+
+a.full-screen-icon:hover {
+  transform: scale(
+    1.2
+  ); /* Au survol des liens ayant la classe "full-screen-icon", l'icône est agrandie */
+}
+
+a.download-icon :hover {
+  transform: scale(
+    1.2
+  ); /* Au survol des liens ayant la classe "download-icon", l'icône est agrandie  */
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+/*deuxième section du template single-photo*/
+.bottom-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh; /* Le bloc du bas a une hauteur de 10% de la hauteur de la fenêtre */
+  padding: 1vw; /* Ajoute un espacement intérieur de 1% de la largeur du conteneur */
+}
+
+.prev-link,
+.next-link {
+  display: flex;
+  align-items: center;
+}
+
+.prev-link img,
+.next-link img {
+  width: 5vw; /* Les images à l'intérieur des liens "prev-link" et "next-link" ont une largeur de 5% de la largeur de la fenêtre */
+  height: 5vw; /* Les images à l'intérieur des liens "prev-link" et "next-link" ont une hauteur de 5% de la hauteur de la fenêtre */
+  filter: invert(1); /* Inverse les couleurs des images */
+}
+
+.contact-link {
+  display: inline-block;
+  padding: 1vw; /* Ajoute un espacement intérieur de 1% de la largeur du conteneur */
+  background-color: #333; /* Le lien a un arrière-plan de couleur #333 */
+  color: #fff; /* Le lien a une couleur de texte blanche */
+  text-decoration: none; /* Supprime la décoration de lien par défaut */
+  margin-top: 2vh; /* Ajoute une marge en haut de 2% de la hauteur de la fenêtre */
+}
+
+/* Style pour la croix de fermeture */
+.modal-close-photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1vw;
+  font-size: 2vw;
+  font-weight: bold;
+  color: #666;
+  cursor: pointer;
+}
+
+.modal-close-photo:hover,
+.modal-close-photo:focus {
+  color: #000;
+  text-decoration: none;
+  outline: none;
+}
+
+.deuxieme {
+  width: 100vw; /* Largeur de 100% de la vue */
+}
+
+.bottom-block {
+  display: flex;
+  grid-template-columns: 75vw 0% 5vw 25vw; /* Colonnes du tableau en unités vw */
+  position: relative;
+  left: -1vh;
+}
+
+.flechedroite {
+  position: relative;
+  right: -3vw; /* Déplacer l'élément vers la droite de 3%  */
+  background-color: #fff !important;
+  top: -20px;
+}
+
+.flechegauche {
+  position: relative;
+  left: 5vw; /* Déplace l'élément vers la gauche de 5% */
+  background-color: #fff !important;
+  top: -20px;
+}
+
+a.contact-photo-link {
+  text-decoration: none !important;
+  background: none !important;
+  position: relative;
+  left: -200px;
+}
+
+.left-block {
+  border-bottom: 1px solid black; /* Ajoute une bordure noire en bas */
+}
+
+.minione {
+  display: flex;
+  flex-direction: column; /* Définir la direction des éléments en colonne */
+  position: relative;
+  top: 3vw; /* Déplacer l'élément vers le haut de 3% d */
+  left: 7vw; /* Déplacer l'élément vers la gauche de 7%  */
+}
+
+.prev-linkd img {
+  object-fit: cover; /* Ajuster la taille de l'image pour qu'elle remplisse entièrement son conteneur */
+  width: 9vw; /* Définit la largeur de l'image à 9%  */
+  height: 9vw; /* Définit la hauteur de l'image à 9%  */
+  position: relative;
+  top: -20px;
+  left: -30px;
+}
+
+.prev-linkg img {
+  object-fit: cover; /* Ajuste la taille de l'image pour qu'elle remplisse entièrement son conteneur */
+  width: 9vw; /* Définit la largeur de l'image à 9%  */
+  height: 9vw; /* Définit la hauteur de l'image à 9%  */
+  position: relative;
+  top: -20px;
+}
+
+.minideux {
+  display: flex;
+  flex-direction: column; /* Définir la direction des éléments en colonne */
+  position: relative;
+  top: 3vw; /* Déplacer l'élément vers le haut de 3%  */
+  left: -24.5vw; /* Déplacer l'élément vers la gauche de 24.5%  */
+}
+
+/*troisieme section single-photo.php*/
+
+.troisieme {
+  width: 100vw;
+  border-top: 1px solid black;
+  position: relative;
+  top: 10vh;
+}
+
+.site-main > *:last-child {
+  margin-top: -100px;
+}
+
+.troisieme__overlay {
+  position: absolute;
+  top: 38vh;
+  left: 23.5vw; /* Positionnement horizontal au centre de l'écran */
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47vw; /* Largeur de 47% de la largeur de l'écran */
+  height: 64vh; /* Hauteur de 64% de la hauteur de l'écran */
+}
+
+.troisieme__overlay:hover {
+  opacity: 1;
+}
+
+.troisieme__icons a {
+  display: inline-block;
+  margin: 10px;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.troisieme__icons a:hover {
+  transform: scale(1.2);
+}
+
+.full-screen-icon {
+  text-decoration: none;
+}
+
+.download-icon {
+  text-decoration: none;
+}
+
+i {
+  width: 90px;
+  font-size: 35px;
+}
+/*******************************************************************responsive***************************************/
+@media screen and (max-width: 768px) {
+  /* Désactiver les modifications pour le menu burger */
+
+  .menu-burger {
+    display: block;
+  }
+  .menu-button-container #primary-mobile-menu .dropdown-icon {
+    position: relative;
+    left: -50px;
+  }
+  .container {
+    max-width: 100% !important;
+    max-height: 100% !important;
+  }
+
+  .left-block,
+  .right-block {
+    flex-basis: 100%;
+    padding: 0;
+    top: 50px;
+  }
+
+  .right-block img {
+    width: 100%;
+    height: auto;
+  }
+
+  .bottom-block {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    top: 80px;
+    left: 0px;
+  }
+
+  .prev-link,
+  .next-link {
+    margin-top: 2vh;
+  }
+
+  .prev-link {
+    order: 2;
+  }
+
+  .next-link {
+    order: 3;
+  }
+
+  .fullscreen-icon {
+    width: 10vw;
+    height: 10vw;
+  }
+
+  .modal {
+    width: 90%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .modal-close-photo {
+    font-size: 4vw;
+  }
+}
+.wpforms-form .wpforms-field-label {
+  top: 1px;
+}
+@media screen and (max-width: 769px) {
+  .container {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .minione {
+    display: none;
+  }
+  .overlay {
+    height: 80%;
+  }
+}
+@media screen and (max-width: 769px) {
+  .container {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .minideux {
+    display: none;
+  }
+}
+@media screen and (max-width: 769px) {
+  .container {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .trait {
+    display: none;
+  }
+}
+@media screen and (max-width: 769px) {
+  .container {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .right-block {
+    order: -1 !important;
+  }
+}
+@media screen and (max-width: 769px) {
+  .container {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .menu-wrapper {
+    background-color: #e00000;
+  }
+  .primary-navigation a:hover,
+  .primary-navigation a:link,
+  .primary-navigation a:visited {
+    color: #fff !important;
+    text-align: center;
+    position: relative;
+    top: 50px !important;
+  }
+}
+
+.post-navigation .nav-links {
+  position: relative;
+  top: 50px;
+}
+/*section "photo apparentée*/
+@media screen and (max-width: 769px) {
+  .site-main > *:last-child {
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+}
+.troisieme__images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* modifier pour centrer les images */
+  margin: 0 -10px;
+}
+.troisieme h2 {
+  font-family: Space Mono;
+  font-size: 20px;
+  position: relative;
+  left: 30px;
+  top: 30px;
+}
+.troisieme__item {
+  flex-basis: calc(50% - 20px);
+  margin: 10px;
+  max-width: 720px; /* ajouter une largeur maximale pour les images */
+}
+
+.troisieme__item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-width: 700px; /* ajouter une largeur maximale pour les images */
+  max-height: 700px; /* ajouter une hauteur maximale pour les images */
+  position: relative;
+  top: 50px;
+}
+
+.troisieme__item figure {
+  margin: 0;
+}
+
+.troisieme__item h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.troisieme__bouton {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.bouton {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #000;
+  background-color: #fff;
+  color: #000;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  top: 70px;
+}
+
+.bouton:hover {
+  background-color: #000;
+  color: #fff;
+}
+section.troisieme {
+  position: relative;
+  top: 10vh !important;
+}
+.troisieme__item {
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .troisieme__overlay {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 720px;
+    height: 280px;
+  }
+
+  .troisieme__overlay:hover {
+    opacity: 1;
+  }
+
+  .troisieme__icons a {
+    display: inline-block;
+    margin: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .troisieme__icons a:hover {
+    transform: scale(1.2);
+  }
+
+  .full-screen-icon {
+    text-decoration: none;
+  }
+
+  .download-icon {
+    text-decoration: none;
+  }
+}
+@media screen and (max-width: 769px) {
+  .container {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .titrephoto {
+    font-size: 45px;
+    text-align: center;
+  }
+  p {
+    position: relative;
+    left: 10px;
+  }
+  a.contact-photo-link {
+    position: relative;
+    top: 50px;
+    left: 0px;
+  }
+  .troisieme__images {
+    flex-direction: column;
+  }
+  .troisieme {
+    position: relative;
+    top: 30vh;
+  }
+  .troisieme h2 {
+    left: 3px;
+  }
+  .troisieme__item {
+    flex-basis: 100%;
+    margin: 10px 0;
+    max-width: 100%;
+  }
+}
+.footer-navigation-wrapper {
+  position: relative;
+  top: 50px;
+}
+/*************************************************************lightbox*******************************************************/
+/* Le style CSS de la lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.lightbox__container {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.lightbox__container img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+}
+#main > section:nth-child(2) > div > button > i {
+  font-size: 14px !important;
+}
+#main > section:nth-child(2) > div > button {
+  background-color: #0c0d0e00 !important;
+}
+.fa-times:before {
+  font-size: 16px;
+}
+.site .button:not(:hover):not(:active):not(.has-background),
+button:not(:hover):not(:active):not(.has-background),
+input[type="submit"]:not(:hover):not(:active):not(.has-background),
+input[type="reset"]:not(:hover):not(:active):not(.has-background),
+.wp-block-search
+  .wp-block-search__button:not(:hover):not(:active):not(.has-background),
+.wp-block-button
+  .wp-block-button__link:not(:hover):not(:active):not(.has-background),
+.wp-block-file
+  a.wp-block-file__button:not(:hover):not(:active):not(.has-background) {
+  background-color: #24232000 !important;
+}
+.fa,
+.fas {
+  color: #fff;
 }

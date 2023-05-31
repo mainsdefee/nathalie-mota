@@ -13,6 +13,7 @@
 
 ?>
 
+
 			</main><!-- #main -->
 		</div><!-- #primary -->
 	</div><!-- #content -->
@@ -49,11 +50,55 @@
 <!--inclure le modèle modale-contact.php-->
 <?php get_template_part('templates/modal', 'contact'); ?>
 
-
-
-
-
 <?php wp_footer(); ?>
+
+<div class="lightbox">
+    <button class="lightbox__close"><i class="fas fa-times"></i></button>
+    <div class="lightbox__overlay"></div>
+    <div class="lightbox__container">
+        <img src="" alt="">
+    </div>
+</div>
+
+<script src="https://kit.fontawesome.com/143327980b.js" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        function openLightbox(imageUrl) {
+            const lightbox = document.querySelector(".lightbox");
+            const lightboxImage = lightbox.querySelector(".lightbox__container img");
+
+            lightboxImage.src = imageUrl;
+            lightbox.style.display = "flex";
+        }
+
+        function closeLightbox() {
+            const lightbox = document.querySelector(".lightbox");
+            lightbox.style.display = "none";
+        }
+
+        // Gestionnaire d'événement pour le bouton de fermeture
+        const closeIcon = document.querySelector(".lightbox__close");
+        closeIcon.addEventListener("click", function () {
+            closeLightbox();
+        });
+
+        // Gestionnaires d'événements pour les icônes plein écran
+        const fullscreenIcons = document.querySelectorAll(".full-screen-icon");
+        fullscreenIcons.forEach(function (icon) {
+            icon.addEventListener("click", function (e) {
+                e.preventDefault();
+                const imageUrl = this.getAttribute("href");
+                openLightbox(imageUrl);
+            });
+        });
+    });
+</script>
+
+<script src="lightbox.js"></script>
+
+
+
+
 
 </body>
 </html>
