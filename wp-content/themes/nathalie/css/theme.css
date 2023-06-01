@@ -246,6 +246,7 @@ a.contact-photo-link {
 
 .left-block {
   border-bottom: 1px solid black; /* Ajoute une bordure noire en bas */
+  top: -140px;
 }
 
 .minione {
@@ -296,8 +297,8 @@ a.contact-photo-link {
 
 .troisieme__overlay {
   position: absolute;
-  top: 38vh;
-  left: 23.5vw; /* Positionnement horizontal au centre de l'écran */
+  top: 35vh;
+  left: 21vw; /* Positionnement horizontal au centre de l'écran */
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
@@ -305,8 +306,8 @@ a.contact-photo-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 47vw; /* Largeur de 47% de la largeur de l'écran */
-  height: 64vh; /* Hauteur de 64% de la hauteur de l'écran */
+  width: 42vw;
+  height: 57vh; /* Hauteur de 64% de la hauteur de l'écran */
 }
 
 .troisieme__overlay:hover {
@@ -337,6 +338,26 @@ i {
   width: 90px;
   font-size: 35px;
 }
+#main
+  > section:nth-child(2)
+  > section
+  > div.troisieme__images
+  > div:nth-child(2)
+  > figure
+  > a
+  > img {
+  max-height: 482px;
+}
+#main
+  > section:nth-child(2)
+  > section
+  > div.troisieme__images
+  > div:nth-child(1)
+  > figure
+  > a
+  > img {
+  max-height: 482px;
+}
 /*******************************************************************responsive***************************************/
 @media screen and (max-width: 768px) {
   /* Désactiver les modifications pour le menu burger */
@@ -362,14 +383,16 @@ i {
 
   .right-block img {
     width: 100%;
-    height: auto;
+    height: 77%;
+    position: relative;
+    top: 10px;
   }
 
   .bottom-block {
     flex-direction: column;
     height: auto;
     align-items: center;
-    top: 80px;
+    top: 150px;
     left: 0px;
   }
 
@@ -472,6 +495,7 @@ i {
     margin-top: 10px;
   }
 }
+
 .troisieme__images {
   display: flex;
   flex-wrap: wrap;
@@ -534,7 +558,7 @@ i {
 }
 section.troisieme {
   position: relative;
-  top: 10vh !important;
+  top: 19vh !important;
 }
 .troisieme__item {
   position: relative;
@@ -652,7 +676,7 @@ section.troisieme {
 .lightbox__container img {
   display: block;
   max-width: 100%;
-  max-height: 100%;
+  max-height: 900px;
   margin: 0 auto;
 }
 #main > section:nth-child(2) > div > button > i {
@@ -679,4 +703,36 @@ input[type="reset"]:not(:hover):not(:active):not(.has-background),
 .fa,
 .fas {
   color: #fff;
+}
+
+/*page d'accueil*/
+/*première section*/
+.hero {
+  position: relative;
+}
+
+#photo_principale {
+  width: 100vw;
+  height: 250vh;
+  object-fit: cover;
+}
+
+.hero h1 {
+  position: absolute;
+  width: 53vw;
+  height: 10vh;
+  left: 25vw;
+  top: 40vh;
+  font-family: "Space Mono", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 5vw;
+  line-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 3px #ffffff; /* White 3px stroke */
+  -webkit-text-fill-color: transparent;
 }

@@ -220,3 +220,4 @@ function enqueue_lightbox_script() {
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_lightbox_script' );
 
+
