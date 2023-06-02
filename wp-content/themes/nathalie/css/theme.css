@@ -713,8 +713,8 @@ input[type="reset"]:not(:hover):not(:active):not(.has-background),
 
 #photo_principale {
   width: 100vw;
-  height: 250vh;
-  object-fit: cover;
+  height: 150vh;
+  object-fit: cover !important;
 }
 
 .hero h1 {
@@ -735,4 +735,56 @@ input[type="reset"]:not(:hover):not(:active):not(.has-background),
   color: transparent;
   -webkit-text-stroke: 3px #ffffff; /* White 3px stroke */
   -webkit-text-fill-color: transparent;
+}
+/* deuxième section de la page d'accueil*/
+#font {
+  font-family: poppins;
+}
+.filtres__taxonomie,
+.filtres__formats,
+.filtres__tri {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 10px 10px 0; /* Espace entre les menus et en bas des menus */
+}
+
+.filtres__taxonomie label,
+.filtres__formats label,
+.filtres__tri label {
+  display: block;
+  margin-bottom: 5px; /* Espacement entre le label et le sélecteur */
+}
+
+@media (max-width: 768px) {
+  .filtres__taxonomie,
+  .filtres__formats,
+  .filtres__tri {
+    display: block;
+    margin: 0 0 10px 0; /* Espacement entre les menus en version mobile */
+  }
+}
+
+#main > section.galerie.bloc-page > div > div.filtres__tri.colonnes.colonne {
+  position: relative;
+  left: 970px;
+  top: 20px;
+}
+#main > section.galerie.bloc-page > div > div.filtres__formats {
+  position: relative;
+  left: 500px;
+  top: 20px;
+}
+#main > section.galerie.bloc-page > div > div.filtres__taxonomie {
+  position: relative;
+  left: 50px;
+  top: 20px;
+}
+select#select-ordre {
+  color: #fff !important;
+}
+#select-ordre > option:nth-child(2) {
+  color: #000 !important;
+}
+#select-ordre > option:nth-child(1) {
+  color: #000 !important;
 }
