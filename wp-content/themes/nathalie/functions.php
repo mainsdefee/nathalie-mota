@@ -220,6 +220,46 @@ function enqueue_lightbox_script() {
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_lightbox_script' );
 
+/*Ce code est utilisé pour créer une fonction Ajax  "charger_plus_photos" dans WordPress. Cette fonction est utilisée pour charger davantage de photos de type "photo" à partir d'une requête WP_Query*/
+function charger_plus_photos() {
+  $offset = $_POST['offset'];
+  $perPage = $_POST['perPage'];
+
+  $args = array(
+    'post_type' => 'photo',
+    'posts_per_page' => $perPage,
+    'orderby' => 'rand',
+    'offset' => $offset
+  );
+
+  $query = new WP_Query($args);
+
+  $photos = array();
+
+  if ($query->have_posts()) {
+    while ($query->have_posts()) {
+      $query->the_post();
+
+      $photo = array(
+        'id' => get_the_ID(),
+        'title' => get_the_title(),
+        'thumbnail' => get_the_post_thumbnail_url(),
+        'permalink' => get_permalink(),
+        'fullscreenUrl' => get_the_post_thumbnail_url(null, 'full')
+      );
+
+      $photos[] = $photo;
+    }
+
+    wp_reset_postdata();
+  }
+
+  wp_send_json_success($photos);
+}
+
+add_action('wp_ajax_charger_plus_photos', 'charger_plus_photos');
+add_action('wp_ajax_nopriv_charger_plus_photos', 'charger_plus_photos');
+
 
 
 

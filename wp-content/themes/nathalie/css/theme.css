@@ -82,13 +82,55 @@ button#wpforms-submit-137.wpforms-submit {
   font-family: Space Mono; /* Utiliser la police Space Mono pour le titre */
   font-style: italic; /* mettre le titre est en italique */
   font-size: 66px; /* Définir la taille de police du titre à 66 pixels */
+  position: relative;
+  top: 90px;
 }
-
+#main
+  > section:nth-child(1)
+  > div.container.single-photo-content
+  > div.left-block
+  > p:nth-child(4) {
+  position: relative;
+  top: 100px !important;
+}
+#main
+  > section:nth-child(1)
+  > div.container.single-photo-content
+  > div.left-block
+  > p:nth-child(5) {
+  position: relative;
+  top: 100px !important;
+}
+#main
+  > section:nth-child(1)
+  > div.container.single-photo-content
+  > div.left-block
+  > p:nth-child(6) {
+  position: relative;
+  top: 100px !important;
+}
+#main
+  > section:nth-child(1)
+  > div.container.single-photo-content
+  > div.left-block
+  > p:nth-child(7) {
+  position: relative;
+  top: 100px !important;
+}
+#main
+  > section:nth-child(1)
+  > div.container.single-photo-content
+  > div.left-block
+  > p:nth-child(8) {
+  position: relative;
+  top: 100px !important;
+}
 .left-block {
   flex-basis: 50%; /* Le bloc de gauche occupe 50% de l'espace disponible dans le conteneur */
   padding: 2vw; /* Ajouter un espacement intérieur de 2% de la largeur du conteneur */
   position: relative;
   top: -51px;
+  left: 10px;
 }
 
 .image3 {
@@ -99,6 +141,7 @@ button#wpforms-submit-137.wpforms-submit {
   flex-basis: 50%; /* Le bloc de droite occupe 50% de l'espace disponible dans le conteneur */
   position: relative;
   order: 0 !important; /* Définir l'ordre d'affichage de ce bloc  */
+  left: 10px;
 }
 
 .right-block img {
@@ -111,8 +154,8 @@ button#wpforms-submit-137.wpforms-submit {
   position: absolute; /* Position absolue par rapport au bloc parent */
   top: 0;
   left: 0;
-  width: 100%;
-  height: 92%;
+  width: 88%;
+  height: 84%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -124,7 +167,9 @@ button#wpforms-submit-137.wpforms-submit {
 .right-block:hover .overlay {
   opacity: 1; /* L'overlay devient visible au survol du bloc parent */
 }
-
+#fullscreen-overlay.overlay {
+  height: 700px;
+}
 .fullscreen-icon {
   display: block;
   width: 5vw; /* Largeur de l'icône en unité vw  */
@@ -220,9 +265,13 @@ a.download-icon :hover {
   display: flex;
   grid-template-columns: 75vw 0% 5vw 25vw; /* Colonnes du tableau en unités vw */
   position: relative;
-  left: -1vh;
+  left: 3vh;
+  top: -5vh;
 }
-
+.bottom-block p {
+  position: relative;
+  left: 27px;
+}
 .flechedroite {
   position: relative;
   right: -3vw; /* Déplacer l'élément vers la droite de 3%  */
@@ -245,7 +294,6 @@ a.contact-photo-link {
 }
 
 .left-block {
-  border-bottom: 1px solid black; /* Ajoute une bordure noire en bas */
   top: -140px;
 }
 
@@ -272,6 +320,7 @@ a.contact-photo-link {
   height: 9vw; /* Définit la hauteur de l'image à 9%  */
   position: relative;
   top: -20px;
+  left: 80px;
 }
 
 .minideux {
@@ -281,12 +330,28 @@ a.contact-photo-link {
   top: 3vw; /* Déplacer l'élément vers le haut de 3%  */
   left: -24.5vw; /* Déplacer l'élément vers la gauche de 24.5%  */
 }
-
+.lignesmall img {
+  width: 803px;
+  position: relative;
+  top: -7px;
+  left: 64px;
+  top: -71px !important;
+}
 /*troisieme section single-photo.php*/
 
+.ligne {
+  width: 550px;
+  position: relative;
+  left: 54px;
+}
+.ligne img {
+  width: 1550px;
+  position: relative;
+  left: 10px;
+  top: 35px;
+}
 .troisieme {
   width: 100vw;
-  border-top: 1px solid black;
   position: relative;
   top: 10vh;
 }
@@ -297,8 +362,8 @@ a.contact-photo-link {
 
 .troisieme__overlay {
   position: absolute;
-  top: 35vh;
-  left: 21vw; /* Positionnement horizontal au centre de l'écran */
+  top: 36vh;
+  left: 20.5vw; /* Positionnement horizontal au centre de l'écran */
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
@@ -306,8 +371,8 @@ a.contact-photo-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 42vw;
-  height: 57vh; /* Hauteur de 64% de la hauteur de l'écran */
+  width: 41vw;
+  height: 60vh; /* Hauteur de 60% de la hauteur de l'écran */
 }
 
 .troisieme__overlay:hover {
@@ -346,7 +411,16 @@ i {
   > figure
   > a
   > img {
-  max-height: 482px;
+  max-height: 550px;
+  position: relative;
+  left: -37px;
+  width: 751px !important;
+}
+#over.troisieme__overlay {
+  left: 339px !important;
+  width: 748px !important;
+  height: 550px;
+  top: 325px;
 }
 #main
   > section:nth-child(2)
@@ -356,7 +430,18 @@ i {
   > figure
   > a
   > img {
-  max-height: 482px;
+  max-height: 550px;
+  position: relative;
+  left: -37px;
+  width: 751px !important;
+}
+
+.troisieme__item {
+  margin: 48px !important;
+}
+.bouton {
+  position: relative;
+  top: 244px !important;
 }
 /*******************************************************************responsive***************************************/
 @media screen and (max-width: 768px) {
@@ -386,8 +471,14 @@ i {
     height: 77%;
     position: relative;
     top: 10px;
+    left: -12px;
   }
-
+  #fullscreen-overlay.overlay {
+    height: 240px;
+    width: 392px;
+    left: -13px;
+    top: 8px;
+  }
   .bottom-block {
     flex-direction: column;
     height: auto;
@@ -506,7 +597,7 @@ i {
   font-family: Space Mono;
   font-size: 20px;
   position: relative;
-  left: 30px;
+  left: 68px;
   top: 30px;
 }
 .troisieme__item {
@@ -543,31 +634,40 @@ i {
   display: inline-block;
   padding: 10px 20px;
   border: 2px solid #000;
-  background-color: #fff;
+  background-color: #d8d8d8;
   color: #000;
   font-size: 1.2em;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   position: relative;
-  top: 70px;
+  top: 50px;
+  font-family: space mono;
 }
 
 .bouton:hover {
-  background-color: #000;
-  color: #fff;
+  background-color: #d8d8d8;
+  color: #000000;
 }
 section.troisieme {
   position: relative;
-  top: 19vh !important;
+  top: 2vh !important;
 }
 .troisieme__item {
   position: relative;
+  margin-bottom: 150px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .bouton {
+    position: relative;
+    top: 100px !important;
+  }
 }
 @media screen and (max-width: 768px) {
   .troisieme__overlay {
     position: absolute;
-    top: 63%;
-    left: 50%;
+    top: 35%;
+    left: 45%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
@@ -575,8 +675,8 @@ section.troisieme {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 720px;
-    height: 280px;
+    width: 393px;
+    height: 385px;
   }
 
   .troisieme__overlay:hover {
@@ -609,12 +709,84 @@ section.troisieme {
     max-height: 100%;
   }
   .titrephoto {
-    font-size: 45px;
     text-align: center;
+    top: -75px;
+    font-size: 28px;
+    left: -16px;
+  }
+  #main
+    > section:nth-child(1)
+    > div.container.single-photo-content
+    > div.left-block
+    > p:nth-child(4) {
+    position: relative;
+    top: -50px !important;
+  }
+  #main
+    > section:nth-child(1)
+    > div.container.single-photo-content
+    > div.left-block
+    > p:nth-child(5) {
+    position: relative;
+    top: -50px !important;
+  }
+  #main
+    > section:nth-child(1)
+    > div.container.single-photo-content
+    > div.left-block
+    > p:nth-child(6) {
+    position: relative;
+    top: -50px !important;
+  }
+  #main
+    > section:nth-child(1)
+    > div.container.single-photo-content
+    > div.left-block
+    > p:nth-child(7) {
+    position: relative;
+    top: -50px !important;
+  }
+  #main
+    > section:nth-child(1)
+    > div.container.single-photo-content
+    > div.left-block
+    > p:nth-child(7) {
+    position: relative;
+    top: -50px !important;
+  }
+  #main
+    > section:nth-child(1)
+    > div.container.single-photo-content
+    > div.left-block
+    > p:nth-child(8) {
+    position: relative;
+    top: -50px !important;
+  }
+  .lignesmall img {
+    width: 388px;
+    position: relative;
+    left: 1px;
+    top: -27px !important;
+  }
+  .bottom-block {
+    position: relative;
+    top: -10px !important;
+    left: -21px;
+  }
+  .bottom-block p {
+    position: relative;
+    left: 27px;
+    top: 11px !important;
+  }
+  .ligne {
+    width: 40px;
+    position: relative;
+    left: -11px;
   }
   p {
     position: relative;
     left: 10px;
+    top: 45px !important;
   }
   a.contact-photo-link {
     position: relative;
@@ -623,6 +795,8 @@ section.troisieme {
   }
   .troisieme__images {
     flex-direction: column;
+    position: relative;
+    top: -2px !important;
   }
   .troisieme {
     position: relative;
@@ -630,13 +804,22 @@ section.troisieme {
   }
   .troisieme h2 {
     left: 3px;
+    top: 50px;
   }
   .troisieme__item {
     flex-basis: 100%;
     margin: 10px 0;
     max-width: 100%;
   }
+  #carre.troisieme__item {
+    position: relative;
+    top: -8px !important;
+  }
+  #carre.troisieme__item img {
+    width: 50px;
+  }
 }
+
 .footer-navigation-wrapper {
   position: relative;
   top: 50px;
@@ -754,7 +937,12 @@ input[type="reset"]:not(:hover):not(:active):not(.has-background),
   display: block;
   margin-bottom: 5px; /* Espacement entre le label et le sélecteur */
 }
-
+#font {
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  top: -100px;
+}
 @media (max-width: 768px) {
   .filtres__taxonomie,
   .filtres__formats,
@@ -762,6 +950,10 @@ input[type="reset"]:not(:hover):not(:active):not(.has-background),
     display: block;
     margin: 0 0 10px 0; /* Espacement entre les menus en version mobile */
   }
+}
+.filtres.colonnes {
+  position: relative;
+  top: 80px;
 }
 
 #main > section.galerie.bloc-page > div > div.filtres__tri.colonnes.colonne {
@@ -787,4 +979,155 @@ select#select-ordre {
 }
 #select-ordre > option:nth-child(1) {
   color: #000 !important;
+}
+#categories {
+  position: relative;
+  left: 50px;
+}
+#format {
+  position: relative;
+  left: -178px;
+}
+#ordre {
+  position: relative;
+  left: -82px;
+}
+/*troisième section*/
+section.troisieme {
+  object-fit: cover !important;
+}
+.bordure {
+  border: none !important;
+}
+#main > section.troisieme > div.troisieme__images > div:nth-child(2) {
+  object-fit: cover !important;
+}
+.troisieme__item img {
+  object-fit: cover !important;
+  max-height: 500px;
+}
+#carre {
+  position: relative;
+  object-fit: cover !important;
+  max-width: 700px;
+  max-height: 700px !important;
+}
+#carre.troisieme__item {
+  position: relative;
+  top: 10px !important;
+  width: 350px;
+  height: 350px;
+  left: -5px;
+}
+#carre.troisieme__item img {
+  width: 700px !important;
+  height: 700px !important;
+  object-fit: cover !important;
+}
+#btn-charger-plus.bouton {
+  background: #d8d8d8 !important;
+  color: #000000;
+  font-family: space mono;
+}
+@media (max-width: 768px) {
+  #over.troisieme__overlay {
+    left: 163px !important;
+    width: 394px !important;
+    height: 390px;
+    top: 94px;
+    object-fit: cover !important;
+  }
+  .troisieme__item h3 {
+    margin-top: -146px;
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 768px) {
+  #main
+    > section:nth-child(2)
+    > section
+    > div.troisieme__images
+    > div:nth-child(1)
+    > figure
+    > a
+    > img {
+    max-height: 390px;
+    position: relative;
+    left: -37px;
+    width: 390px !important;
+  }
+  #main
+    > section:nth-child(2)
+    > section
+    > div.troisieme__images
+    > div:nth-child(2)
+    > figure
+    > a
+    > img {
+    max-height: 390px;
+    position: relative;
+    left: -37px;
+    width: 390px !important;
+  }
+}
+@media (max-width: 768px) {
+  #troisieme_blocks {
+    object-fit: cover !important;
+    top: -208px;
+  }
+}
+@media (max-width: 768px) {
+  #photo_principale {
+    width: 99vw;
+    height: 51vh;
+    object-fit: cover !important;
+    position: relative;
+    top: 80px;
+  }
+  .hero h1 {
+    position: absolute;
+    width: 53vw;
+    height: 10vh;
+    left: 25vw;
+    top: 19vh;
+    font-family: "Space Mono", sans-serif;
+    font-style: italic;
+    font-size: 5vw;
+    line-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+    -webkit-text-fill-color: transparent;
+  }
+  #categories {
+    position: relative;
+    left: 17px;
+    top: 123px;
+  }
+  #format {
+    display: none !important;
+  }
+  #carre.troisieme__item img {
+    width: 390px !important;
+    height: 390px !important;
+    object-fit: cover !important;
+    left: -35px;
+    top: -100px !important;
+  }
+  #carre.troisieme__item {
+    position: relative;
+    top: 150px !important;
+    width: 350px;
+    height: 350px;
+    left: -5px;
+  }
+  #btn-charger-plus.bouton {
+    background: #d8d8d8 !important;
+    color: #000000;
+    font-family: space mono;
+    top: 152px !important;
+  }
 }

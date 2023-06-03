@@ -31,9 +31,10 @@ while ( have_posts() ) :
     <p>Format :<?php the_terms( get_the_ID() , 'format' ); ?></p> <!-- Afficher le format de la photo en utilisant la taxonomie personnalisée 'format' --> 
     <p>Type : <?php echo get_field('type'); ?></p><!-- Afficher le type de la photo en utilisant un champ personnalisé -->
     <p>Année : <?php echo get_field('annee'); ?></p> <!-- Afficher l'année de la photo en utilisant un champ personnalisé -->
-
-  </div>
+    
   
+
+</div>
 
 <div class="right-block">
   <img src="<?php the_post_thumbnail_url(); ?>">
@@ -49,7 +50,9 @@ while ( have_posts() ) :
   </div>
 </div>
 
-
+<div class="lignesmall">
+  <img  src="<?php echo get_stylesheet_directory_uri(); ?>/images/line.png" alt="Mon image">
+</div>
  
 </div>
 <div class="deuxieme">
